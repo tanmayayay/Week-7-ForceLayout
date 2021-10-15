@@ -20,4 +20,4 @@
 6. Example 7.6: Styling and adding marks
 7. Example 7.6: Grouping and Mouse interaction
 
-For more examples:  https://github.com/vasturiano/d3-force-3d
+For more examples:   https://github.com/d3/d3-force
