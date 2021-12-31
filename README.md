@@ -1,4 +1,4 @@
-# Fall2021-Week-7-ForceLayout
+# Week-7-ForceLayout
 ### forceSimulation Examples
 
  1. Example 7.1: Sample data using d3.range() function
