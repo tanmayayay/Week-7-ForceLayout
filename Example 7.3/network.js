@@ -1,4 +1,5 @@
 function simulate(data,svg)
+
 {
     let width = parseInt(svg.attr("viewBox").split(' ')[2])
     let height = parseInt(svg.attr("viewBox").split(' ')[3])
