@@ -2,13 +2,13 @@
 <html lang = "en">
     <head>
         <meta charset = "UTF-8">
-        <title>Activity 5</title>
+        <title>Network Visualizations</title>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
         <style>
             svg {
-                width: 100vw;
-                height: 100vh;
+                width: 150vw;
+                height: 150vh;
                 margin: 0;
             }
             text {
@@ -39,7 +39,7 @@
     </head>
     <body>
         <h1>
-            Scopus Publishers
+            "FORCE LAYOUT"
         </h1>
 
         <script>
@@ -54,7 +54,7 @@
                     .attr("class", "canvas")
                 
                 let numPapers = {};
-                data.nodes.forEach((d, i) => numPapers[i] = d.NumberOfPapers)
+                    data.nodes.forEach((d, i) => numPapers[i] = d.NumberOfPapers)
 
                 const paperExtent = d3.extent(Object.values(numPapers), d => d)
 
@@ -63,7 +63,7 @@
                     .range([20, 70])
 
                 let groups = {};
-                data.nodes.forEach((d, i) => groups[i] = d.Group)
+                    data.nodes.forEach((d, i) => groups[i] = d.Group)
                 
                 const groupExtent = d3.extent(Object.values(groups), d => d)
 
@@ -101,10 +101,10 @@
                 gNodes.on('mouseenter', (m, d) => {
                     d3.selectAll('circle').classed('inactive', true)
                     d3.selectAll('.g_' + d.Group.toString()).classed('inactive', false)
-                })
+         })
                 gNodes.on('mouseleave', (m, d) => {
                     d3.selectAll('circle').classed('inactive', false)
-                })
+         })
 
             
 
@@ -128,18 +128,18 @@
                     .attr('y1', function (d)  {return d.source.y})
                     .attr('x2', function (d)  {return d.target.x})
                     .attr('y2', function (d)  {return d.target.y})
-            }
+        }
             svg.call(d3.zoom()
                 .extent([[0,0], [width, height]])
                 .scaleExtent([1,8])
                 .on("zoom", zoomed));
             function zoomed({transform}) {
                 gCanvas.attr('transform', transform);
-            }
-            })
+        }
+        })
             
 
             
-        </script>
-    </body>
+</script>
+</body>
 </html>
